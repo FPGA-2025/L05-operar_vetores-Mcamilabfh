@@ -5,5 +5,7 @@ module operar_vetores(
     output saida_or_logico,
     output [5:0] saida_not
 );
-	//insira seu código aqui
+	assign saida_or_bit_a_bit = a | b;
+    assign saida_or_logico    = |(a | b); // reduzido a 1 bit: se tiver qualquer 1, vira 1
+    assign saida_not          = ~{b, a};  // concatena b com a e faz NOT bit a bit
 endmodule
